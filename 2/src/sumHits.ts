@@ -1,4 +1,4 @@
-type Tag = "javascript" | "typescript" | "go" | "rust" | "elixir" | "ruby";
+type Tag = "javascript" | "typescript" | "go" | "rust" | "elixir" | "ruby" | "docker";
 
 type Page = {
   name: string;
@@ -52,6 +52,19 @@ const sitemap: Page[] = [
           },
         ],
       },
+      {
+        name: "Emitting javascript files",
+        tags: ["typescript"],
+        hits: 25,
+        children: [
+          {
+            name: "Packaging emmited files in a Dockerfile",
+            tags: ["javascript", "docker"],
+            hits: 10,
+            children: [],
+          }
+        ]
+      }
     ],
   },
   {
